@@ -3,7 +3,7 @@ import cors from 'cors'
 import helmet from 'helmet'
 import express, { json, urlencoded } from 'express'
 import cookieParser from 'cookie-parser'
-// import deserializeUser from '../middlewares/deserializeUser'
+import deserializeUser from '../core/middlewares/deserializeUser'
 import http from 'http'
 import routes from '../routes'
 const app = express()
@@ -53,6 +53,6 @@ app.use(
 app.use(urlencoded({ extended: true }))
 app.use('/image', express.static(path.join(__dirname, '../../public/uploads')))
 app.use(routes(io))
-// app.use(deserializeUser)
+app.use(deserializeUser)
 
 export default server
