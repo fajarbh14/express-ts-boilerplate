@@ -1,1 +1,6 @@
-# scuola-backend
+# Express Ts 
+
+Prisma
+PostgreSQL
+TypeScript
+Socket IO
